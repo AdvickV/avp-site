@@ -75,18 +75,18 @@ export default function AVPHomepage() {
             Advick Vidhu Parames V
           </p>
 
-          <h1 className="bg-gradient-to-b from-white via-orange-100 to-orange-300 bg-clip-text text-[clamp(4rem,15vw,10rem)] font-black leading-[1.1] tracking-tight text-transparent">
+          <h1 className="bg-gradient-to-b from-white via-orange-100 to-orange-300 bg-clip-text text-[clamp(2.8rem,12vw,10rem)] font-black leading-[1.1] tracking-tight text-transparent max-w-[90vw] md:max-w-full">
             AVP
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/65 md:text-xl">
+          <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/65 md:text-xl text-center md:text-left  mx-auto max-w-5xl">
             Between who I am and who I’m becoming.
           </p>
 
           <div className="mt-16 flex items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
             <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
 
-            <span className="text-xs uppercase tracking-[0.4em] text-white/60">
+            <span className="text-xs uppercase tracking-[0.4em] text-white/60 text-center md:text-left  mx-auto max-w-5xl">
               mysterious · chaotic · cinematic
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function AVPHomepage() {
       <section id="worlds" className="relative px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-20">
-            <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
+            <p className="mb-4 text-xs uppercase tracking-[0.2em] md:tracking-[0.5em] text-orange-200/60">
               What My Brain Looks Like
             </p>
 
@@ -265,7 +265,7 @@ export default function AVPHomepage() {
               <span className="text-orange-200"> An obsession.</span>
             </h2>
 
-            <p className="mt-8 max-w-lg leading-relaxed text-white/60">
+            <p className="mt-8 max-w-lg leading-relaxed text-white/60 text-center md:text-left mx-auto max-w-5xl">
               Arena lights, impossible highlights, and the feeling that greatness
               is happening in real time.
             </p>
@@ -322,7 +322,7 @@ export default function AVPHomepage() {
               {
                 name: 'IShowSpeed',
                 image:
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0jYEh3WSynZxcqkVtfWEznjVgJhZOX6780g&s',
+                  'https://mrwallpaper.com/images/hd/a-young-man-with-afro-hair-is-smiling-nvlp1tywteenw83g.jpg',
               },
             ].map((artist) => (
               <div
