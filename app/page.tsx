@@ -83,7 +83,7 @@ export default function AVPHomepage() {
             Between who I am and who I’m becoming.
           </p>
 
-          <div className="mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
+          <div className="mt-10 md:mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
             <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
 
             <span className="whitespace-nowrap text-[10px] uppercase tracking-[0.15em] text-white/60 md:text-sm md:tracking-[0.35em]">
@@ -93,9 +93,9 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section id="worlds" className="relative px-6 py-16">
+      <section id="worlds" className="relative px-6 py-10 md:py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-20">
+          <div className="mb-10 md:mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.2em] md:tracking-[0.5em] text-orange-200/60">
               What My Brain Looks Like
             </p>
@@ -158,9 +158,9 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section id="fragments" className="relative px-6 py-16">
+      <section id="fragments" className="relative px-6 py-10 md:py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-20">
+          <div className="mb-10 md:mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
               Fragments
             </p>
@@ -196,7 +196,7 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section id="travel" className="relative overflow-hidden py-16">
+      <section id="travel" className="relative overflow-hidden px-6 py-10 md:py-16">
         <div className="mb-14 px-6">
           <div className="mx-auto max-w-6xl">
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
@@ -253,8 +253,8 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section className="relative px-6 py-16">
-        <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
+      <section className="relative px-6 py-10 md:py-16">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 md:gap-14 md:grid-cols-2">
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
               Wemby Era
@@ -282,7 +282,7 @@ export default function AVPHomepage() {
 
       <section id="music" className="relative px-6 py-10">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-20">
+          <div className="mb-10 md:mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
               Soundtrack
             </p>
@@ -348,7 +348,7 @@ export default function AVPHomepage() {
       </section>
 
       <footer className="relative px-6 pb-20 pt-16">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/5 px-8 py-16 text-center backdrop-blur-3xl">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/5 px-8 py-10 md:py-16 text-center backdrop-blur-3xl">
           <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
             AVP
           </p>
