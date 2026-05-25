@@ -6,16 +6,21 @@ export default function AVPHomepage() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [playing, setPlaying] = useState(false)
 
-  const toggleMusic = () => {
+  const toggleMusic = async () => {
     if (!audioRef.current) return
 
     if (playing) {
       audioRef.current.pause()
-    } else {
-      audioRef.current.play()
+      setPlaying(false)
+      return
     }
 
-    setPlaying(!playing)
+    try {
+      await audioRef.current.play()
+      setPlaying(true)
+    } catch (error) {
+      console.error('Audio playback failed:', error)
+    }
   }
 
   return (
@@ -24,7 +29,7 @@ export default function AVPHomepage() {
 
       <div className="fixed inset-0 -z-10 opacity-[0.06] mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')] animate-[grain_10s_steps(10)_infinite]" />
 
-      <nav className="fixed left-1/2 top-5 z-50 flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 shadow-[0_0_40px_rgba(255,180,120,0.06)] backdrop-blur-3xl md:px-6 md:py-4">
+      <nav className="pointer-events-auto fixed left-1/2 top-5 z-50 flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 shadow-[0_0_40px_rgba(255,180,120,0.06)] backdrop-blur-3xl md:px-6 md:py-4">
         <div className="flex items-center gap-3">
           <div className="h-3 w-3 rounded-full bg-orange-300 shadow-[0_0_20px_rgba(255,180,120,0.8)]" />
 
@@ -39,7 +44,7 @@ export default function AVPHomepage() {
           </a>
 
           <a href="#fragments" className="transition hover:text-white">
-            Fragments
+            Fragments 
           </a>
 
           <a href="#travel" className="transition hover:text-white">
@@ -52,48 +57,52 @@ export default function AVPHomepage() {
         </div>
 
         <button
+          type="button"
           onClick={toggleMusic}
-          className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs tracking-[0.25em] text-white/70 backdrop-blur-xl transition hover:bg-orange-200/[0.06] hover:text-white"
+          className="relative z-60 pointer-events-auto rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs tracking-[0.25em] text-white/70 backdrop-blur-xl transition hover:bg-orange-200/[0.06] hover:text-white"
         >
           {playing ? 'MUSIC on' : 'MUSIC off'}
         </button>
       </nav>
 
-      <section className="relative flex min-h-screen items-center justify-center px-6 pt-32">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="/hero.jpg"
-            alt="AVP"
-            className="h-full w-full animate-[slowZoom_14s_ease-in-out_infinite_alternate] object-cover object-[center_35%] opacity-40"
-          />
+      <section className="relative flex min-h-[85vh] flex-col items-center justify-start overflow-hidden bg-black px-6 pt-14 md:h-screen md:min-h-screen md:justify-center md:pt-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,180,120,0.08),transparent_45%)]" />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#050505]" />
+        <h1 className="absolute left-1/2 top-[45%] z-0 -translate-x-1/2 -translate-y-[85%] md:top-1/2 md:-translate-y-[95%] select-none text-[26vw] font-black leading-none tracking-[-0.08em] text-white/[0.11] md:text-[18rem]">
+          ADVICK
+        </h1>
+
+        <div className="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center gap-10 pointer-events-none">
+          <div className="relative w-full">
+            <div className="absolute inset-0 scale-[1.8] rounded-full bg-orange-200/35 blur-[140px] md:scale-100 md:bg-orange-200/10 md:blur-3xl" />
+            <div className="absolute inset-0 scale-[2.2] rounded-full bg-orange-400/10 blur-[180px] md:hidden" />
+
+            <img
+              src="/hero.png"
+              alt="Advick"
+              className="relative z-10 h-auto max-h-[72vh] w-full max-w-[92vw] object-contain md:h-[85vh] lg:animate-[floatHero_6s_ease-in-out_infinite] pointer-events-none"
+            />
+          </div>
+
+          <div className="relative z-20 w-full px-6 text-center md:absolute md:left-1/2 md:bottom-10 md:w-auto md:px-0 md:-translate-x-1/2">
+            <p className="max-w-[80vw] md:max-w-none mx-auto text-[11px] uppercase tracking-[0.22em] text-orange-100/100 md:text-sm md:tracking-[0.35em]">
+              Between who I am and who I’m becoming.
+            </p>
+          </div>
         </div>
 
-        <div className="relative z-10 flex max-w-6xl flex-col items-center text-center">
-          <p className="mb-4 text-xs uppercase tracking-[0.6em] text-orange-200/70">
-            Advick Vidhu Parames V
-          </p>
-
-          <h1 className="bg-gradient-to-b from-white via-orange-100 to-orange-300 bg-clip-text text-[clamp(2.8rem,12vw,10rem)] font-black leading-[1.1] tracking-tight text-transparent max-w-[90vw] md:max-w-full">
-            AVP
-          </h1>
-
-          <p className="mx-auto mt-8 max-w-xl text-center text-lg font-light leading-relaxed text-white/65 md:text-xl">
-            Between who I am and who I’m becoming.
-          </p>
-
-          <div className="mt-10 md:mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
-
-            <span className="whitespace-nowrap text-[10px] uppercase tracking-[0.15em] text-white/60 md:text-sm md:tracking-[0.35em]">
-              mysterious · chaotic · cinematic
-            </span>
+        <div className="absolute right-6 top-1/2 hidden -translate-y-1/2 text-right md:block">
+          <div className="space-y-2 text-sm font-medium uppercase tracking-[0.25em] text-white/55">
+            <p>BASKETBALL</p>
+            <p>MUSIC</p>
+            <p>GAMING</p>
+            <p>CINEMA</p>
+            <p>TRAVEL</p>
           </div>
         </div>
       </section>
 
-      <section id="worlds" className="relative px-6 py-10 md:py-16">
+      <section id="worlds" className="relative px-6 py-4 md:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 md:mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.2em] md:tracking-[0.5em] text-orange-200/60">
@@ -367,7 +376,7 @@ export default function AVPHomepage() {
         </div>
       </footer>
 
-      <audio ref={audioRef} loop src="/music.mp3" />
+      <audio ref={audioRef} loop preload="auto" src="/music.mp3" />
     </main>
   )
 }

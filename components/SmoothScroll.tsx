@@ -5,17 +5,23 @@ import { useEffect } from 'react'
 
 export default function SmoothScroll() {
   useEffect(() => {
-    const lenis = new Lenis()
+    const isMobile = window.innerWidth < 768
+
+    const lenis = isMobile
+     ? null
+     : new Lenis({
+        duration: 1.2,
+      })
 
     function raf(time: number) {
-      lenis.raf(time)
+      lenis?.raf(time)
       requestAnimationFrame(raf)
     }
 
     requestAnimationFrame(raf)
 
     return () => {
-      lenis.destroy()
+      lenis?.destroy()
     }
   }, [])
 
