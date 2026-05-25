@@ -29,7 +29,7 @@ export default function AVPHomepage() {
 
       <div className="fixed inset-0 -z-10 opacity-[0.06] mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')] animate-[grain_10s_steps(10)_infinite]" />
 
-      <nav className="pointer-events-auto fixed left-1/2 top-5 z-50 flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 shadow-[0_0_40px_rgba(255,180,120,0.06)] backdrop-blur-3xl md:px-6 md:py-4">
+      <nav className="pointer-events-auto fixed left-1/2 top-5 z-[9999] flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 shadow-[0_0_40px_rgba(255,180,120,0.06)] backdrop-blur-3xl md:px-6 md:py-4">
         <div className="flex items-center gap-3">
           <div className="h-3 w-3 rounded-full bg-orange-300 shadow-[0_0_20px_rgba(255,180,120,0.8)]" />
 
@@ -65,14 +65,14 @@ export default function AVPHomepage() {
         </button>
       </nav>
 
-      <section className="relative flex min-h-[85vh] flex-col items-center justify-start overflow-hidden bg-black px-6 pt-14 md:h-screen md:min-h-screen md:justify-center md:pt-24">
+      <section className="relative flex flex-col items-center justify-start overflow-hidden bg-black px-6 pt-14 md:h-screen md:min-h-screen md:justify-center md:pt-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,180,120,0.08),transparent_45%)]" />
 
         <h1 className="absolute left-1/2 top-[45%] z-0 -translate-x-1/2 -translate-y-[85%] md:top-1/2 md:-translate-y-[95%] select-none text-[26vw] font-black leading-none tracking-[-0.08em] text-white/[0.11] md:text-[18rem]">
           ADVICK
         </h1>
 
-        <div className="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center gap-10 pointer-events-none">
+        <div className="relative z-0 flex w-full max-w-7xl items-center justify-center pointer-events-none">
           <div className="relative w-full">
             <div className="absolute inset-0 scale-[1.8] rounded-full bg-orange-200/35 blur-[140px] md:scale-100 md:bg-orange-200/10 md:blur-3xl" />
             <div className="absolute inset-0 scale-[2.2] rounded-full bg-orange-400/10 blur-[180px] md:hidden" />
@@ -80,14 +80,14 @@ export default function AVPHomepage() {
             <img
               src="/hero.png"
               alt="Advick"
-              className="relative z-10 h-auto max-h-[72vh] w-full max-w-[92vw] object-contain md:h-[85vh] lg:animate-[floatHero_6s_ease-in-out_infinite] pointer-events-none"
+              className="relative z-0 h-auto max-h-[72vh] w-full max-w-[92vw] object-contain md:h-[85vh] lg:animate-[floatHero_6s_ease-in-out_infinite] pointer-events-none"
             />
-          </div>
 
-          <div className="relative z-20 w-full px-6 text-center md:absolute md:left-1/2 md:bottom-10 md:w-auto md:px-0 md:-translate-x-1/2">
-            <p className="max-w-[80vw] md:max-w-none mx-auto text-[11px] uppercase tracking-[0.22em] text-orange-100/100 md:text-sm md:tracking-[0.35em]">
-              Between who I am and who I’m becoming.
-            </p>
+            <div className="absolute left-1/2 bottom-6 z-20 w-full px-6 text-center -translate-x-1/2 md:bottom-10 md:w-auto md:px-0 md:-translate-x-1/2">
+              <p className="max-w-[80vw] md:max-w-none mx-auto text-[11px] uppercase tracking-[0.22em] text-orange-100/100 md:text-sm md:tracking-[0.35em]">
+                Between who I am and who I’m becoming.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -289,7 +289,7 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section id="music" className="relative px-6 py-10">
+      <section id="music" className="relative px-6 py-6 md:py-12">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 md:mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
@@ -356,8 +356,8 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <footer className="relative px-6 pb-20 pt-16">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/[0.03] px-8 py-10 text-center shadow-[0_0_80px_rgba(255,180,120,0.04)] backdrop-blur-3xl md:py-16">
+      <footer className="relative px-6 pb-12 pt-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/[0.03] px-8 py-10 text-center shadow-[0_0_80px_rgba(255,180,120,0.04)] backdrop-blur-3xl md:py-14">
           <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
             AVP
           </p>
