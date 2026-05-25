@@ -20,11 +20,11 @@ export default function AVPHomepage() {
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#050505] text-white selection:bg-orange-200 selection:text-black">
-      <div className="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top,_rgba(255,180,120,0.15),_transparent_40%),radial-gradient(circle_at_bottom,_rgba(255,120,80,0.08),_transparent_35%),linear-gradient(to_bottom,#050505,#0b0b0b,#050505)]" />
+      <div className="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top,_rgba(255,180,120,0.14),_transparent_30%),radial-gradient(circle_at_bottom,_rgba(100,70,160,0.10),_transparent_35%),radial-gradient(circle_at_center,_rgba(255,120,80,0.06),_transparent_45%),linear-gradient(to_bottom,#050505,#0b0b0b,#111111,#050505)]" />
 
-      <div className="fixed inset-0 -z-10 opacity-[0.07] mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="fixed inset-0 -z-10 opacity-[0.06] mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')] animate-[grain_10s_steps(10)_infinite]" />
 
-      <nav className="fixed left-1/2 top-5 z-50 flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
+      <nav className="fixed left-1/2 top-5 z-50 flex w-[92%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 shadow-[0_0_40px_rgba(255,180,120,0.06)] backdrop-blur-3xl md:px-6 md:py-4">
         <div className="flex items-center gap-3">
           <div className="h-3 w-3 rounded-full bg-orange-300 shadow-[0_0_20px_rgba(255,180,120,0.8)]" />
 
@@ -53,9 +53,9 @@ export default function AVPHomepage() {
 
         <button
           onClick={toggleMusic}
-          className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-[0.25em] text-white/70 backdrop-blur-xl transition hover:bg-white/10 hover:text-white"
+          className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs tracking-[0.25em] text-white/70 backdrop-blur-xl transition hover:bg-orange-200/[0.06] hover:text-white"
         >
-          {playing ? 'PAUSE' : 'SOUND'}
+          {playing ? 'MUSIC on' : 'MUSIC off'}
         </button>
       </nav>
 
@@ -64,10 +64,10 @@ export default function AVPHomepage() {
           <img
             src="/hero.jpg"
             alt="AVP"
-            className="h-full w-full object-cover object-[center_35%] opacity-35"
+            className="h-full w-full animate-[slowZoom_14s_ease-in-out_infinite_alternate] object-cover object-[center_35%] opacity-40"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-[#050505]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#050505]" />
         </div>
 
         <div className="relative z-10 flex max-w-6xl flex-col items-center text-center">
@@ -83,7 +83,7 @@ export default function AVPHomepage() {
             Between who I am and who I’m becoming.
           </p>
 
-          <div className="mt-10 md:mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
+          <div className="mt-10 md:mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
             <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
 
             <span className="whitespace-nowrap text-[10px] uppercase tracking-[0.15em] text-white/60 md:text-sm md:tracking-[0.35em]">
@@ -100,14 +100,14 @@ export default function AVPHomepage() {
               What My Brain Looks Like
             </p>
 
-            <h2 className="text-3xl font-semibold md:text-6xl">
+            <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-white/95 md:text-6xl">
               The stuff that shaped
               <span className="text-orange-200"> my days</span>
             </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/10">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-orange-200/[0.06]">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-200/10 to-transparent opacity-0 transition group-hover:opacity-100" />
 
               <div className="relative z-10">
@@ -123,7 +123,7 @@ export default function AVPHomepage() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/10">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-orange-200/[0.06]">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-200/10 to-transparent opacity-0 transition group-hover:opacity-100" />
 
               <div className="relative z-10">
@@ -139,7 +139,7 @@ export default function AVPHomepage() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/10">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-orange-200/[0.06]">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-200/10 to-transparent opacity-0 transition group-hover:opacity-100" />
 
               <div className="relative z-10">
@@ -165,28 +165,28 @@ export default function AVPHomepage() {
               Fragments
             </p>
 
-            <h2 className="text-3xl font-semibold md:text-6xl">
+            <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-white/95 md:text-6xl">
               Scenes from
               <span className="text-orange-200"> lately.</span>
             </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-2xl">
               <img
                 src="/fragment-1.jpg"
                 className="h-[520px] w-full object-cover object-top"
               />
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-2xl">
               <img
                 src="/fragment-2.jpg"
                 className="h-[520px] w-full object-cover object-top"
               />
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-2xl">
               <img
                 src="/fragment-3.jpg"
                 className="h-[520px] w-full object-cover object-top"
@@ -203,7 +203,7 @@ export default function AVPHomepage() {
               Travel Log
             </p>
 
-            <h2 className="text-3xl font-semibold md:text-6xl">
+            <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-white/95 md:text-6xl">
               Countires I’m glad I
               <span className="text-orange-200"> saw.</span>
             </h2>
@@ -239,7 +239,7 @@ export default function AVPHomepage() {
             ].map((country, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-8 py-5 text-lg text-white/80 backdrop-blur-2xl"
+                className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-8 py-5 text-lg text-white/80 backdrop-blur-2xl"
               >
                 <img
                   src={`https://flagcdn.com/w40/${country.code}.png`}
@@ -271,7 +271,7 @@ export default function AVPHomepage() {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-2xl">
             <img
               src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600&auto=format&fit=crop"
               className="h-[550px] w-full object-cover"
@@ -327,7 +327,7 @@ export default function AVPHomepage() {
             ].map((artist) => (
               <div
                 key={artist.name}
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/10"
+                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:bg-orange-200/[0.06]"
               >
                 <div className="overflow-hidden">
                   <img
@@ -348,7 +348,7 @@ export default function AVPHomepage() {
       </section>
 
       <footer className="relative px-6 pb-20 pt-16">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/5 px-8 py-10 md:py-16 text-center backdrop-blur-3xl">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center rounded-[3rem] border border-white/10 bg-white/[0.03] px-8 py-10 text-center shadow-[0_0_80px_rgba(255,180,120,0.04)] backdrop-blur-3xl md:py-16">
           <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
             AVP
           </p>
@@ -360,7 +360,7 @@ export default function AVPHomepage() {
           <a
             href="https://instagram.com/advick.vp"
             target="_blank"
-            className="mt-10 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-sm tracking-[0.3em] text-white/70 transition hover:bg-white/10 hover:text-white"
+            className="mt-10 rounded-full border border-white/10 bg-white/[0.03] px-6 py-4 text-sm tracking-[0.3em] text-white/70 transition hover:bg-orange-200/[0.06] hover:text-white"
           >
             @advick.vp
           </a>
