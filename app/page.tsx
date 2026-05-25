@@ -265,7 +265,7 @@ export default function AVPHomepage() {
               <span className="text-orange-200"> An obsession.</span>
             </h2>
 
-            <p className="mt-8 max-w-lg leading-relaxed text-white/60 text-center md:text-left mx-auto max-w-5xl">
+            <p className="mt-8 max-w-lg leading-relaxed text-white/60 md:text-left mx-auto max-w-5xl">
               Arena lights, impossible highlights, and the feeling that greatness
               is happening in real time.
             </p>
