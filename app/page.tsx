@@ -79,14 +79,14 @@ export default function AVPHomepage() {
             AVP
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/65 md:text-xl text-center md:text-left  mx-auto max-w-5xl">
+          <p className="mx-auto mt-8 max-w-xl text-center text-lg font-light leading-relaxed text-white/65 md:text-xl">
             Between who I am and who I’m becoming.
           </p>
 
-          <div className="mt-16 flex flex items-center justify-center gap-5 md:gap-8 gap-2 md:flex-row md:gap-4 max-w-[90vw] mx-auto px-4 md:px-6 border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
+          <div className="mt-16 mx-auto flex w-fit items-center justify-center gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-2xl md:gap-8 md:px-8 md:py-4">
             <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
 
-            <span className="text-[11px] md:text-sm uppercase tracking-[0.18em] md:tracking-[0.35em] text-white/60 text-center md:text-left mx-auto max-w-5xl whitespace-nowrap ">
+            <span className="whitespace-nowrap text-[10px] uppercase tracking-[0.15em] text-white/60 md:text-sm md:tracking-[0.35em]">
               mysterious · chaotic · cinematic
             </span>
           </div>
@@ -100,7 +100,7 @@ export default function AVPHomepage() {
               What My Brain Looks Like
             </p>
 
-            <h2 className="text-4xl font-semibold text-3xl md:text-6xl">
+            <h2 className="text-3xl font-semibold md:text-6xl">
               The stuff that shaped
               <span className="text-orange-200"> my days</span>
             </h2>
@@ -165,7 +165,7 @@ export default function AVPHomepage() {
               Fragments
             </p>
 
-            <h2 className="text-4xl font-semibold text-3xl md:text-6xl">
+            <h2 className="text-3xl font-semibold md:text-6xl">
               Scenes from
               <span className="text-orange-200"> lately.</span>
             </h2>
@@ -203,7 +203,7 @@ export default function AVPHomepage() {
               Travel Log
             </p>
 
-            <h2 className="text-4xl font-semibold text-3xl md:text-6xl">
+            <h2 className="text-3xl font-semibold md:text-6xl">
               Countires I’m glad I
               <span className="text-orange-200"> saw.</span>
             </h2>
@@ -265,7 +265,7 @@ export default function AVPHomepage() {
               <span className="text-orange-200"> An obsession.</span>
             </h2>
 
-            <p className="mt-8 max-w-lg leading-relaxed text-white/60 md:text-left mx-auto max-w-5xl">
+            <p className="mt-8 max-w-lg leading-relaxed text-white/60">
               Arena lights, impossible highlights, and the feeling that greatness
               is happening in real time.
             </p>
@@ -353,7 +353,7 @@ export default function AVPHomepage() {
             AVP
           </p>
 
-          <h2 className="bg-gradient-to-b from-white to-orange-200 bg-clip-text text-5xl font-black text-transparent text-4xl md:text-7xl">
+          <h2 className="bg-gradient-to-b from-white to-orange-200 bg-clip-text text-4xl font-black text-transparent md:text-7xl">
             advick.in
           </h2>
 
