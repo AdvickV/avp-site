@@ -83,10 +83,10 @@ export default function AVPHomepage() {
             Between who I am and who I’m becoming.
           </p>
 
-          <div className="mt-16 flex items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
+          <div className="mt-16 flex flex-col gap-2 md:flex-row md:gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
             <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
 
-            <span className="text-xs uppercase tracking-[0.4em] text-white/60 text-center md:text-left  mx-auto max-w-5xl">
+            <span className="text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/60 text-center md:text-left  mx-auto max-w-5xl">
               mysterious · chaotic · cinematic
             </span>
           </div>
