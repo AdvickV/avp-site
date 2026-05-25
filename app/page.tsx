@@ -84,7 +84,7 @@ export default function AVPHomepage() {
           </p>
 
           <div className="mt-16 flex flex items-center justify-center gap-5 md:gap-8 gap-2 md:flex-row md:gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-2xl">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300" />
+            <div className="h-2 w-2 animate-pulse rounded-full bg-orange-300 max-w-[90vw] mx-auto px-4 md:px-6" />
 
             <span className="text-[11px] md:text-sm uppercase tracking-[0.18em] md:tracking-[0.35em] text-white/60 text-center md:text-left mx-auto max-w-5xl whitespace-nowrap ">
               mysterious · chaotic · cinematic
@@ -280,7 +280,7 @@ export default function AVPHomepage() {
         </div>
       </section>
 
-      <section id="music" className="relative px-6 py-16">
+      <section id="music" className="relative px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <div className="mb-20">
             <p className="mb-4 text-xs uppercase tracking-[0.5em] text-orange-200/60">
